@@ -4,6 +4,7 @@ class iCar:
     name = "blank"
     is_police = False
     it_is_allright = True
+
     def __init__(self, speed, color, name, is_police=False):
         self.speed = speed
         self.color = color
@@ -29,6 +30,7 @@ class iCar:
         else:
             print(f"The {self.name} car can't move {direction}.")
             return False
+
 
 class TownCar(iCar):
     def __init__(self, speed, color, name):
