@@ -32,22 +32,22 @@ class iCar:
 
 class TownCar(iCar):
     def __init__(self, speed, color, name):
-        iCar().__init__(speed, color, name)
+        super().__init__(speed, color, name)
 
 
 class SportCar(iCar):
     def __init__(self, speed, color, name):
-        iCar().__init__(speed, color, name)
+        super().__init__(speed, color, name)
 
 
 class WorkCar(iCar):
     def __init__(self, speed, color, name):
-        iCar().__init__(speed, color, name)
+        super().__init__(speed, color, name)
 
 
 class PoliceCar(iCar):
     def __init__(self, speed, color, name):
-        iCar().__init__(speed, color, name, is_police=True)
+        super().__init__(speed, color, name, is_police=True)
 
-    def DoSignal(self):
-        print(f"Beep!!!.")
+    def doSignal(self):
+        print(f"Beep!!!")
