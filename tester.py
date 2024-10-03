@@ -1,5 +1,6 @@
-from Cars import PoliceCar, SportCar, TownCar, WorkCar
+from cars import PoliceCar, SportCar, TownCar, WorkCar
 from game import Enemy, Player
+from factory import ToyFactory
 import random
 
 
@@ -32,3 +33,14 @@ def second():
         if player.health <= 0:
             print(f"{player.name} defeated! {enemy.name} wins!")
             break
+
+def third():
+    factory = ToyFactory()
+    toys = [ 
+        factory.makeToy("Freddy Fazbear", "golden", "TeddyBear"),
+        factory.makeToy("My best friend", "brown", "Cheburashka"),
+        factory.makeToy("The great communicator", "red", "Chainsaw"),
+        factory.makeToy("Huggy Waggy", "blue", "Huggy Waggy"),
+    ]
+    for toy in toys:
+        toy.read_label()

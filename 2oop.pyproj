@@ -21,7 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Cars.py" />
+    <Compile Include="cars.py" />
+    <Compile Include="factory.py" />
     <Compile Include="game.py" />
     <Compile Include="tester.py" />
     <Compile Include="_2oop.py" />
