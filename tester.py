@@ -20,18 +20,18 @@ def first():
 
 def second():
     player = Player("Guybrush", 100, 20, 5, random.randint(1, 3))
-    enemy = Enemy("Gobburin", 80, 15, 8, random.randint(1, 3))
+    enemy = Enemy("Gobburin", 80, 25, 8)
 
     print("Battle begins!")
-    while player.health > 0 and enemy.health > 0:
+    while player.get_health() > 0 and enemy.get_health() > 0:
         player.attack(enemy)
-        if enemy.health <= 0:
-            print(f"{enemy.name} defeated! {player.name} wins!")
+        if enemy.get_health() <= 0:
+            print(f"{enemy.get_name()} defeated! {player.get_name()} wins!")
             break
 
         enemy.attack(player)
-        if player.health <= 0:
-            print(f"{player.name} defeated! {enemy.name} wins!")
+        if player.get_health() <= 0:
+            print(f"{player.get_name()} defeated! {enemy.get_name()} wins!")
             break
 
 def third():
@@ -44,3 +44,4 @@ def third():
     ]
     for toy in toys:
         toy.read_label()
+        toy.play()
